@@ -42,7 +42,7 @@ resource "aws_instance" "web_server" {
        #!/bin/bash
        sudo apt update
        sudo apt install docker-compose -y
-       git clone https://github.com/nikkiyuki/yuqui.git
+       git clone https://github.com/Jacobo1001/FinalTelematica.git
        cd FinalTelematica/FinalTelematica-Jacobo/frontend
        sudo docker build -t laberintov1.0 .
        sudo docker run -d -p 80:80 laberintov1.0
