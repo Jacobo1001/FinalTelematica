@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Labyrinth/Maze Game</title>
+  </head>
+  <body class="body">
+    <header>
+      <p class="welcome">Welcome to Labyrinth game</p>
+    </header>
+    <div class="container">
+      <section class="game-screen-container">
+        <canvas class="game-screen" id="game"></canvas>
+      </section>
+      <section class="movement-btns-container">
+        <div class="movement-btn-row">
+          <button id="up" class="movement-btn movement-btn--up">▲</button>
+        </div>
+        <div class="movement-btn-row">
+          <button id="left" class="movement-btn movement-btn--left">◀</button>
+          <button id="down" class="movement-btn movement-btn--down">▼</button>
+          <button id="right" class="movement-btn movement-btn--right">▶</button>
+        </div>
+      </section>
+
+      <section class="game-stats-container">
+        <p class="a-game-stat">
+          Heals: <span class="a-game-stat--lives" id="lives"></span>
+        </p>
+        <p class="a-game-stat">
+          Time: ⌛ <span class="a-game-stat--time" id="time"></span>
+        </p>
+        <p class="a-game-stat">
+          Record: 🏁 <span class="a-game-stat--record" id="record"></span>
+        </p>
+      </section>
+    </div>
+    <footer>
+      <p class="footer-text">Play for fun</p>
+    </footer>
+
+    <script src="./maps.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
