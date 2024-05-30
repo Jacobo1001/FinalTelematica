@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 resource "aws_key_pair" "deployer_key" {
- key_name   = "llaveIac"
- public_key = file("~/.ssh/llaveIac.pub")
+ key_name   = "llaveIaC"
+ public_key = file("~/.ssh/llaveIaC.pub")
 }
 
 resource "aws_security_group" "web" {
@@ -33,9 +33,9 @@ resource "aws_security_group" "web" {
  }
 }
 resource "aws_instance" "web_server" {
- ami                         = "ami-0e001c9271cf7f3b9"
+ ami                         = "ami-00beae93a2d981137"
  instance_type               = "t2.micro"
- key_name                    = "llaveIac"
+ key_name                    = "llaveIaC"
  security_groups             = [aws_security_group.web.name]
  associate_public_ip_address = true
  user_data                   = <<-EOF
@@ -43,9 +43,9 @@ resource "aws_instance" "web_server" {
        sudo apt update
        sudo apt install docker-compose -y
        git clone https://github.com/nikkiyuki/yuqui.git
-       cd yuqui/Truco Concurso/front
-       sudo docker build -t car .
-       sudo docker run -d -p 80:80 car
+       cd FinalTelematica/FinalTelematica-Jacobo/frontend
+       sudo docker build -t laberintov1.0 .
+       sudo docker run -d -p 80:80 laberintov1.0
        EOF
 
 }
